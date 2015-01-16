@@ -31,9 +31,9 @@ public static void sort(int[] num){
 		for (; i < num.length; i++) {
 			for (j = i; j > 0; j--) {
 				if (num[j] < num[j - 1]) {
-					int temp = num[j];
-					num[j] = num[j - 1];
-					num[j - 1] = temp;
+					num[j]=num[j]+num[j-1];
+					num[j-1] = num[j]-num[j-1];
+					num[j] = num[j]-num[j-1];
 					counter++;
 				}
 
